@@ -2,6 +2,10 @@
   text-align: center;
   position: relative;
 }
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 
 nav {
   height: 60px;
@@ -16,7 +20,7 @@ nav {
   align-items: center;
   z-index: 100;
   text-transform: uppercase;
-  position: absolute;
+  position: fixed;
   top: 0;
 }
 nav a {
@@ -43,7 +47,7 @@ nav ul li {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  overflow: hidden;
-  position: absolute;
-  bottom: 0;
+}
+.delivery-container {
+  min-height: 100vh;
 }
