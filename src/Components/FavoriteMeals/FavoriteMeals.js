@@ -1,4 +1,5 @@
 import React from "react";
+import "./FavoriteMeals.css";
 import ModalImage from "react-modal-image";
 import fgf from "../../Assets/hambi.jpeg";
 import fgf2 from "../../Assets/2.jpg";

@@ -1,0 +1,13 @@
+.tri {
+  max-width: 300px !important;
+}
+.tri:hover {
+  opacity: 0.8;
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+.omotac {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
