@@ -1,3 +1,37 @@
-.delivery-container {
-  min-height: 100vh;
+#delivery-container {
+  min-height: 800px;
+  padding: 70px 0 0 0;
+}
+
+.delivery-heading-container {
+  max-width: 740px;
+  margin: auto;
+}
+.delivery-heading-container p {
+  letter-spacing: 1px;
+  line-height: 24px;
+  padding-bottom: 60px;
+}
+.delivery-items-container {
+  width: 920px;
+  margin: auto;
+}
+
+.delivery-item {
+  display: inline-block;
+  width: 185px;
+  margin: 0 20px;
+}
+
+.delivery-item svg {
+  width: 48px;
+  padding: 0 30%;
+  margin: 0;
+  /* align-content: center; */
+}
+
+.delivery-item h4 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 0;
 }

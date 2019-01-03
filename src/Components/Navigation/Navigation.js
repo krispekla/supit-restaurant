@@ -15,12 +15,12 @@ const navigation = () => {
 
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link active" href="#">
+          <a class="nav-link active" href="#delivery-container">
             Delivery
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="#favoriteMeals-container">
             Mobile App
           </a>
         </li>
