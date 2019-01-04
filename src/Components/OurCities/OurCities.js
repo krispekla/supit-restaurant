@@ -1,53 +1,87 @@
 import React from "react";
+import "./OurCities.css";
+
+import newYork from "../../Assets/new-york.jpg";
+import london from "../../Assets/london.jpg";
+import paris from "../../Assets/paris.jpg";
+import tokyio from "../../Assets/tokyio.jpg";
+
+import twitter from "../../Assets/twitter.svg";
+import person from "../../Assets/person.svg";
+import mail from "../../Assets/mail.svg";
 
 const ourCities = () => {
   return (
-    <div>
+    <div id="ourCities-container">
       <h2>
-        YOU CAN FIND US IN ALL PARTS OF THE WORLD. THESE ARE SOME OF THE PLACES
-        WHERE YOU CAN FIND US
+        YOU CAN FIND US IN ALL PARTS OF THE WORLD.
+        <br /> THESE ARE SOME OF THE PLACES WHERE YOU CAN FIND US
       </h2>
       <hr />
       <div className="city-container">
         <div className="city-item-container">
-          <img src="" alt="iphone" />
+          <img src={newYork} alt="iphone" />
           <h4>NEW YORK</h4>
-          <svg />
-          <p>Adresa</p>
-          <svg />
-          <a>@gmail.com</a>
-          <svg />
-          <a>@food</a>
+          <div className="city-item-wrapper">
+            <img className="city-icons" src={person} />
+            <p>244 Madison Ave</p>
+          </div>
+          <div className="city-item-wrapper">
+            <img className="city-icons" src={mail} />
+            <a>ny_food@gmail.com</a>
+          </div>
+          <div className="city-item-wrapper">
+            <img className="city-icons" src={twitter} />
+            <a>@nyfood</a>
+          </div>
         </div>
         <div className="city-item-container">
-          <img src="" alt="iphone" />
-          <h4>NEW YORK</h4>
-          <svg />
-          <p>Adresa</p>
-          <svg />
-          <a>@gmail.com</a>
-          <svg />
-          <a>@food</a>
+          <img src={london} alt="iphone" />
+          <h4>LONDON</h4>
+          <div className="city-item-wrapper">
+            <img className="city-icons" src={person} />
+            <p>St.James's 528</p>
+          </div>
+          <div className="city-item-wrapper">
+            <img className="city-icons" src={mail} />
+            <a>london_food@gmail.com</a>
+          </div>
+          <div className="city-item-wrapper">
+            <img className="city-icons" src={twitter} />
+            <a>@londonfood</a>
+          </div>
         </div>
         <div className="city-item-container">
-          <img src="" alt="iphone" />
-          <h4>NEW YORK</h4>
-          <svg />
-          <p>Adresa</p>
-          <svg />
-          <a>@gmail.com</a>
-          <svg />
-          <a>@food</a>
+          <img src={paris} alt="iphone" />
+          <h4>PARIS</h4>
+          <div className="city-item-wrapper">
+            <img className="city-icons" src={person} />
+            <p>Puteadux 92800</p>
+          </div>
+          <div className="city-item-wrapper">
+            <img className="city-icons" src={mail} />
+            <a>paris_food@gmail.com</a>
+          </div>
+          <div className="city-item-wrapper">
+            <img className="city-icons" src={twitter} />
+            <a>@parisfood</a>
+          </div>
         </div>
         <div className="city-item-container">
-          <img src="" alt="iphone" />
-          <h4>NEW YORK</h4>
-          <svg />
-          <p>Adresa</p>
-          <svg />
-          <a>@gmail.com</a>
-          <svg />
-          <a>@food</a>
+          <img src={tokyio} alt="iphone" />
+          <h4>TOKYIO</h4>
+          <div className="city-item-wrapper">
+            <img className="city-icons" src={person} />
+            <p>Shibuya-ku 2355</p>
+          </div>
+          <div className="city-item-wrapper">
+            <img className="city-icons" src={mail} />
+            <a>tokyio_food@gmail.com</a>
+          </div>
+          <div className="city-item-wrapper">
+            <img className="city-icons" src={twitter} />
+            <a>@tokyiofood</a>
+          </div>
         </div>
       </div>
     </div>

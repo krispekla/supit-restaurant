@@ -4,40 +4,28 @@ import "./Navigation.css";
 
 const navigation = () => {
   return (
-    <nav>
-      <a class="nav-link active" href="#">
+    <nav class="navbar">
+      <a href="#">
         <img src={sign} alt="Smiley face" height="48" width="48" />
       </a>
 
-      <a class="nav-link active" href="#">
-        ORDER
-      </a>
+      <a href="#">ORDER</a>
 
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link active" href="#delivery-container">
-            Delivery
-          </a>
+      <ul>
+        <li>
+          <a href="#delivery-container">Delivery</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#favoriteMeals-container">
-            Mobile App
-          </a>
+        <li>
+          <a href="#mobileApp-container">Mobile App</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            Our Cities
-          </a>
+        <li>
+          <a href="#ourCities-container">Our Cities</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            Subscriptions
-          </a>
+        <li>
+          <a href="#">Subscriptions</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            Contact us
-          </a>
+        <li>
+          <a href="#">Contact us</a>
         </li>
       </ul>
     </nav>
