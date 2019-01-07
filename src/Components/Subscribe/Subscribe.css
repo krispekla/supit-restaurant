@@ -1,0 +1,28 @@
+#subscribe-container {
+  min-height: 600px;
+  background: rgb(255, 249, 249);
+}
+
+#subscribe-container h2 {
+  padding-top: 80px;
+}
+
+.subscribe-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.subscribe-item {
+  margin-right: 30px;
+  background: white;
+  padding: 40px 40px 20px 40px;
+  border-radius: 5px;
+  max-width: 250px;
+}
+.subscribe-item button {
+  width: 120px;
+  border-radius: 50px;
+  margin: 20px 12% 0 12%;
+}
