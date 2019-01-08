@@ -9,14 +9,31 @@ import Reviews from "../Components/Reviews/Reviews";
 import Subscribe from "../Components/Subscribe/Subscribe";
 import Contact from "../Components/Contact/Contact";
 import Footer from "../Components/Footer/Footer";
+import Order from "./Order";
 
 class Restaurant extends React.Component {
+  state = {
+    open: false
+  };
+
+  modalSwitch = () => {
+    let { open } = this.state;
+
+    if (open) {
+      open = false;
+    } else {
+      open = true;
+    }
+    this.setState({ open });
+  };
+
   render() {
     return (
       <React.Fragment>
-        <Navigation />
+        <Navigation modalSwitch={this.modalSwitch} />
         <Intro />
         <Delivery />
+        <Order onCloseModal={this.modalSwitch} open={this.state.open} />
         <FavoriteMeals />
         <MobileApp />
         <OurCities />
