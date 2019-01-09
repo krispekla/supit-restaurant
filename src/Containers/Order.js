@@ -41,12 +41,25 @@ class Order extends React.Component {
 
         {this.state.dataFetched ? (
           <div className="row">
-            <div className="column">
+            <div className="menuColumn">
               <OrderMenu foodMenu={this.state.foodMenu} />
             </div>
-            <div className="column">
-              <h2>Column 2</h2>
-              <p>Some text..</p>
+            <div className="orderColumn">
+              <table>
+                <thead>
+                  <tr>
+                    <th colSpan="12">YOUR ORDERS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colSpan="2">12</td>
+                    <td colSpan="4">naziv patke</td>
+                    <td colSpan="3">12</td>
+                    <td colSpan="3">42kn</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         ) : (

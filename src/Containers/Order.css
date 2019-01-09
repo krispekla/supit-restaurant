@@ -1,12 +1,23 @@
-.column {
+.styles_modal__gNwvD {
+  min-width: 900px;
+}
+.menuColumn {
   float: left;
-  width: 50%;
-  padding: 40px;
+  width: 450px;
+  padding: 10px;
+  /* margin: 10px; */
+  overflow-y: auto !important;
+  height: 620px;
+}
+.orderColumn {
+  float: right;
+  width: 400px;
+  padding: 10px;
+  margin: 10px;
 }
 
 /* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
+
+.clreafix {
   clear: both;
 }

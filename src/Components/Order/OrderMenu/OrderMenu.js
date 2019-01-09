@@ -12,7 +12,7 @@ const orderMenu = props => {
             <small>{item.Opis}</small>
           </td>
           <td>
-            <button className="btn btn-primary">{item.Cijena}.00kn</button>
+            <button className="btn btn-warning">{item.Cijena}.00kn</button>
           </td>
         </tr>
       );
