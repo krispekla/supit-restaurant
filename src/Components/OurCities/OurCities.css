@@ -2,29 +2,34 @@
   min-height: 900px;
   padding-top: 80px;
 }
-
+#ourCities-container h2 {
+  padding-bottom: 40px;
+}
 .city-container {
   display: flex;
   flex-flow: wrap;
   flex-direction: row;
   justify-content: center;
+  margin-top: 90px;
 }
 
 .city-item-container {
-  width: 280px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .city-item-container img {
-  width: 180px;
-  min-height: 100px;
+  width: 260px;
+  min-height: 150px;
   margin-bottom: 20px;
 }
 
 .city-item-container h4 {
   font-weight: 100;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
 }
 .city-item-wrapper {
   display: flex;
@@ -33,21 +38,18 @@
 
 .city-item-wrapper p,
 .city-item-wrapper a {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 100;
-  text-align: center;
-  align-items: center;
-  align-content: center;
-  justify-items: center;
+  margin: 0;
 }
 .city-item-wrapper a {
   color: rgb(0, 132, 255) !important;
 }
 
 .city-icons {
-  width: 20px !important;
+  width: 12px !important;
   min-height: initial !important;
   padding: 0;
-  margin: 0;
-  margin-right: 15px;
+  margin: 0 !important;
+  margin-right: 10px !important;
 }

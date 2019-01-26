@@ -2,7 +2,7 @@ import React from "react";
 import "./MobileApp.css";
 import playstore from "../../Assets/playstore.png";
 import appstore from "../../Assets/appstore.svg";
-import iphone from "../../Assets/iphone.png";
+import iphone from "../../Assets/iphone1.png";
 
 const mobileApp = () => {
   return (

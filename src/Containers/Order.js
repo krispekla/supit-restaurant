@@ -1,6 +1,7 @@
 import React from "react";
 import "./Order.css";
 import Modal from "react-responsive-modal";
+import Loader from "react-loader-spinner";
 import OrderMenu from "../Components/Order/OrderMenu/OrderMenu";
 
 class Order extends React.Component {
@@ -29,16 +30,21 @@ class Order extends React.Component {
       this.setState({ foodMenu, dataFetched });
     }
   };
+
   componentDidMount() {
     if (!this.state.foodMenu) {
-      this.handleFoodFetch();
+      setTimeout(() => {
+        this.handleFoodFetch();
+      }, 2500);
     }
   }
+
   render() {
     return (
       <Modal open={this.props.open} onClose={this.props.onCloseModal} center>
         <h2>ORDER & EAT</h2>
 
+        <hr />
         {this.state.dataFetched ? (
           <div className="row">
             <div className="menuColumn">
@@ -63,7 +69,15 @@ class Order extends React.Component {
             </div>
           </div>
         ) : (
-          <p>Fetching data</p>
+          <div className="loader-container">
+            <Loader
+              className="loader"
+              type="ThreeDots"
+              color="rgb(125,203,255)"
+              height={180}
+              width={180}
+            />
+          </div>
         )}
       </Modal>
     );

@@ -67,9 +67,11 @@ const contact = () => {
             />
           </div>
         </div>
-        <button type="submit" class="btn btn-primary col-sm-4">
-          Send
-        </button>
+        <div className="text-center">
+          <button type="submit" class="btn btn-primary col-sm-4 ">
+            Send
+          </button>
+        </div>
       </form>
     </div>
   );

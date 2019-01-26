@@ -1,5 +1,6 @@
 import React from "react";
-import sign from "../../Assets/sign.png";
+// import sign from "../../Assets/sign.png";
+import sign from "../../Assets/logo4.png";
 import "./Navigation.css";
 
 const navigation = props => {

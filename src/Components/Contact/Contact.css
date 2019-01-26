@@ -9,3 +9,6 @@ form {
   width: 600px;
   margin: auto;
 }
+textarea {
+  resize: none !important;
+}

@@ -1,7 +1,7 @@
 #mobileApp-container {
   padding-top: 80px;
-  min-height: 800px;
-  background: rgb(209, 209, 209);
+  min-height: 100vh;
+  background: rgb(245, 245, 245);
 }
 
 .mobileApp-wrapper {
@@ -14,14 +14,14 @@
 }
 
 .iphone-mockup {
-  width: 650px;
+  width: 450px;
 }
 
 .mobileApp-btn-wrapper {
   align-content: center;
   justify-content: center;
   align-self: center;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
 }
 .mobileApp-btn-item {
   display: flex;

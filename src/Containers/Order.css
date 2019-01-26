@@ -21,3 +21,15 @@
 .clreafix {
   clear: both;
 }
+.loader-container {
+  height: 60vh;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  vertical-align: center;
+}
+.loader {
+  width: 180px !important;
+  height: 180px !important;
+  text-align: center;
+}

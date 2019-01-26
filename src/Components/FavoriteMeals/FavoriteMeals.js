@@ -2,11 +2,14 @@ import React from "react";
 import "./FavoriteMeals.css";
 import ModalImage from "react-modal-image";
 
+import beef from "../../Assets/beef.jpg";
+import soup from "../../Assets/soup.jpg";
+import burger from "../../Assets/burger.jpg";
+import beefkebab from "../../Assets/beefkebab.jpg";
+import submarine3italian from "../../Assets/submarine3italian.jpg";
+import philip from "../../Assets/philip.jpg";
 import pizza from "../../Assets/pizza.jpg";
-// import hambi from "../../Assets/hambi.jpeg";
-// import burger from "../../Assets/burger.jpg";
-// import thai from "../../Assets/thai.jpg";
-// import philip from "../../Assets/philip.jpg";
+import steak from "../../Assets/steak.jpg";
 
 const favoriteMeals = () => {
   return (
@@ -17,8 +20,8 @@ const favoriteMeals = () => {
         <div className="favoriteMeals-picture-wrapper">
           <ModalImage
             className="favoriteMeals-picture"
-            small={pizza}
-            large={pizza}
+            small={burger}
+            large={burger}
             hideDownload={true}
             hideZoom={true}
           />
@@ -26,8 +29,8 @@ const favoriteMeals = () => {
         <div className="favoriteMeals-picture-wrapper">
           <ModalImage
             className="favoriteMeals-picture"
-            small={pizza}
-            large={pizza}
+            small={beefkebab}
+            large={beefkebab}
             hideDownload={true}
             hideZoom={true}
           />
@@ -35,8 +38,8 @@ const favoriteMeals = () => {
         <div className="favoriteMeals-picture-wrapper">
           <ModalImage
             className="favoriteMeals-picture"
-            small={pizza}
-            large={pizza}
+            small={beef}
+            large={beef}
             hideDownload={true}
             hideZoom={true}
           />
@@ -44,8 +47,8 @@ const favoriteMeals = () => {
         <div className="favoriteMeals-picture-wrapper">
           <ModalImage
             className="favoriteMeals-picture"
-            small={pizza}
-            large={pizza}
+            small={soup}
+            large={soup}
             hideDownload={true}
             hideZoom={true}
           />
@@ -53,8 +56,8 @@ const favoriteMeals = () => {
         <div className="favoriteMeals-picture-wrapper">
           <ModalImage
             className="favoriteMeals-picture"
-            small={pizza}
-            large={pizza}
+            small={steak}
+            large={steak}
             hideDownload={true}
             hideZoom={true}
           />
@@ -62,8 +65,8 @@ const favoriteMeals = () => {
         <div className="favoriteMeals-picture-wrapper">
           <ModalImage
             className="favoriteMeals-picture"
-            small={pizza}
-            large={pizza}
+            small={philip}
+            large={philip}
             hideDownload={true}
             hideZoom={true}
           />
@@ -71,8 +74,8 @@ const favoriteMeals = () => {
         <div className="favoriteMeals-picture-wrapper">
           <ModalImage
             className="favoriteMeals-picture"
-            small={pizza}
-            large={pizza}
+            small={submarine3italian}
+            large={submarine3italian}
             hideDownload={true}
             hideZoom={true}
           />
