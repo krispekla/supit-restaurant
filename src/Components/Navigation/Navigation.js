@@ -5,7 +5,7 @@ import "./Navigation.css";
 
 const navigation = props => {
   return (
-    <nav class="navbar">
+    <nav className="navbar">
       <a href="#">
         <img src={sign} alt="Smiley face" height="48" width="48" />
       </a>

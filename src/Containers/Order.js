@@ -3,15 +3,28 @@ import "./Order.css";
 import Modal from "react-responsive-modal";
 import Loader from "react-loader-spinner";
 import OrderMenu from "../Components/Order/OrderMenu/OrderMenu";
+import Cart from "../Components/Order/Cart/Cart";
 
 class Order extends React.Component {
   state = {
     dataFetched: false,
-    foodMenu: null
+    foodMenu: null,
+    foodList: null,
+    orderList: []
+  };
+
+  foodFlatter = foodMenu => {
+    let foods = [];
+    for (let i = 0; i < foodMenu.length; i++) {
+      foodMenu[i].Ponuda.forEach(element => {
+        foods.push(element);
+      });
+    }
+    return foods;
   };
 
   handleFoodFetch = async () => {
-    let { foodMenu, dataFetched } = this.state;
+    let { foodMenu, dataFetched, foodList } = this.state;
 
     if (!foodMenu) {
       try {
@@ -19,7 +32,6 @@ class Order extends React.Component {
           "http://www.fulek.com/VUA/SUPIT/GetCategoriesAndFoods"
         );
         foodMenu = await response.json();
-        console.log(foodMenu);
       } catch (error) {
         console.log(error);
       }
@@ -27,15 +39,22 @@ class Order extends React.Component {
 
     if (foodMenu) {
       dataFetched = true;
-      this.setState({ foodMenu, dataFetched });
+      foodList = this.foodFlatter(foodMenu);
+      this.setState({ foodMenu, dataFetched, foodList });
     }
+  };
+
+  foodSelectHandler = item => {
+    let { orderList, foodList } = this.state;
+    orderList.push(foodList[item]);
+    this.setState({ orderList });
   };
 
   componentDidMount() {
     if (!this.state.foodMenu) {
       setTimeout(() => {
         this.handleFoodFetch();
-      }, 2500);
+      }, 5500);
     }
   }
 
@@ -48,8 +67,12 @@ class Order extends React.Component {
         {this.state.dataFetched ? (
           <div className="row">
             <div className="menuColumn">
-              <OrderMenu foodMenu={this.state.foodMenu} />
+              <OrderMenu
+                foodMenu={this.state.foodMenu}
+                foodSelectHandler={this.foodSelectHandler}
+              />
             </div>
+            <Cart orderList={this.state.orderList} />
             <div className="orderColumn">
               <table>
                 <thead>

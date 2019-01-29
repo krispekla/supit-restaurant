@@ -19,7 +19,7 @@ const subscribe = () => {
             <li>1 meal every day</li>
             <li>1 meal every day</li>
           </ul>
-          <button className="btn btn-primary" type="submit" onClick="">
+          <button className="btn btn-primary" type="submit">
             Sign up now
           </button>
         </div>
@@ -36,7 +36,7 @@ const subscribe = () => {
             <li>1 meal every day</li>
             <li>1 meal every day</li>
           </ul>
-          <button className="btn btn-primary" type="submit" onClick="">
+          <button className="btn btn-primary" type="submit">
             Sign up now
           </button>
         </div>
@@ -53,7 +53,7 @@ const subscribe = () => {
             <li>1 meal every day</li>
             <li>1 meal every day</li>
           </ul>
-          <button className="btn btn-primary" type="submit" onClick="">
+          <button className="btn btn-primary" type="submit">
             Sign up now
           </button>
         </div>

@@ -6,13 +6,18 @@ const contact = () => {
     <div id="contact-container">
       <h2>CONTACT US</h2>
       <hr />
-      <form>
+      <form action="http://www.fulek.com/VUA/SUPIT/ContactUs" method="post">
         <div className="form-group row">
           <label for="colFormLabel" className="col-sm-4 col-form-label">
             Name:
           </label>
           <div className="col-sm-8">
-            <input type="email" className="form-control" id="colFormLabel" />
+            <input
+              type="name"
+              name="name"
+              className="form-control"
+              id="colFormLabel"
+            />
           </div>
         </div>
         <div className="form-group row">
@@ -20,7 +25,12 @@ const contact = () => {
             Email:
           </label>
           <div className="col-sm-8">
-            <input type="email" className="form-control" id="colFormLabel" />
+            <input
+              name="email"
+              type="email"
+              className="form-control"
+              id="colFormLabel"
+            />
           </div>
         </div>
         <div className="form-group row">
@@ -28,12 +38,12 @@ const contact = () => {
             Message importance:
           </label>
           <div className="col-sm-8">
-            <select className="custom-select ">
-              <option value="1">Low</option>
-              <option value="2">Normal</option>
-              <option selected value="3">
-                High{" "}
+            <select name="importance" className="custom-select ">
+              <option value="low">Low</option>
+              <option selected value="normal">
+                Normal
               </option>
+              <option value="high">High</option>
             </select>
           </div>
         </div>
@@ -44,9 +54,12 @@ const contact = () => {
           <div className="col-sm-8">
             <div className="custom-control custom-checkbox ">
               <input
+                name="newsletter"
                 type="checkbox"
                 className="custom-control-input "
                 id="customCheck1"
+                value="true"
+                defaultChecked="true"
               />
               <label className="custom-control-label" for="customCheck1">
                 Yes
@@ -60,6 +73,7 @@ const contact = () => {
           </label>
           <div className="col-sm-8">
             <textarea
+              name="message"
               className="form-control "
               id="exampleFormControlTextarea1"
               rows="3"

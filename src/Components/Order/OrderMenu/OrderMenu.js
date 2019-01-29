@@ -12,7 +12,12 @@ const orderMenu = props => {
             <small>{item.Opis}</small>
           </td>
           <td>
-            <button className="btn btn-warning">{item.Cijena}.00kn</button>
+            <button
+              className="btn btn-warning"
+              onClick={() => props.foodSelectHandler(item.JeloId)}
+            >
+              {item.Cijena}.00kn
+            </button>
           </td>
         </tr>
       );
@@ -30,7 +35,6 @@ const orderMenu = props => {
     );
   });
 
-  console.log(foodMenu);
   return <table>{foodMenu}</table>;
 };
 
