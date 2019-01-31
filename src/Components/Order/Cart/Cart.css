@@ -1,0 +1,26 @@
+.totalValue {
+  color: red;
+  text-align: right;
+  font-weight: 700;
+}
+.totalText {
+  font-weight: 700;
+  text-align: end;
+}
+.orderColumn tbody th {
+  background: none;
+  color: black;
+  text-align: left !important;
+  border: none;
+  border-bottom: 2px solid rgb(39, 38, 38) !important;
+}
+.orderColumn tbody tr:last-of-type {
+  border-top: 2px solid rgb(39, 38, 38) !important;
+  border-bottom: none !important;
+}
+.orderColumn tbody tr:last-of-type td {
+  border: none;
+}
+.orderColumn td {
+  padding-left: 20px;
+}

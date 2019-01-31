@@ -46,7 +46,11 @@ class Order extends React.Component {
 
   foodSelectHandler = item => {
     let { orderList, foodList } = this.state;
-    orderList.push(foodList[item]);
+    // console.log(foodList, "-----", item);
+
+    orderList.push(foodList.find(el => el.JeloId === item));
+    // console.log(orderList);
+
     this.setState({ orderList });
   };
 
@@ -73,23 +77,6 @@ class Order extends React.Component {
               />
             </div>
             <Cart orderList={this.state.orderList} />
-            <div className="orderColumn">
-              <table>
-                <thead>
-                  <tr>
-                    <th colSpan="12">YOUR ORDERS</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td colSpan="2">12</td>
-                    <td colSpan="4">naziv patke</td>
-                    <td colSpan="3">12</td>
-                    <td colSpan="3">42kn</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
           </div>
         ) : (
           <div className="loader-container">
