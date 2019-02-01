@@ -7,6 +7,7 @@
   font-weight: 700;
   text-align: end;
 }
+
 .orderColumn tbody th {
   background: none;
   color: black;
@@ -23,4 +24,21 @@
 }
 .orderColumn td {
   padding-left: 20px;
+}
+.popoverr {
+  z-index: 500;
+  padding: 25px;
+  margin-bottom: 10vh;
+  border: 1px solid rgb(155, 155, 155);
+  border-radius: 2%;
+  background: white;
+  bottom: 0 !important;
+  position: fixed;
+}
+
+.popoverr button {
+  margin-top: 20px;
+}
+.popoverr form {
+  width: 200px;
 }

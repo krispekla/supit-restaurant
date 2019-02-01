@@ -1,17 +1,28 @@
 import React from "react";
 import "./Cart.css";
+import ReactTooltip from "react-tooltip";
 
 const cart = props => {
-  // console.log(props.orderList);
-
   let suma = 0;
   const order = props.orderList.map(it => {
-    suma += it.Cijena;
+    suma += it.Cijena * it.quantity;
     return (
       <tr key={it.Naziv + it.JeloID + suma}>
         <td colSpan="2">{it.JeloId}</td>
-        <td colSpan="4">{it.Naziv}</td>
-        <td colSpan="3" />
+        <td colSpan="4">
+          {it.Naziv}{" "}
+          {it.remark ? (
+            <div
+              data-tip={it.remark}
+              data-place="right"
+              class="badge badge-pill badge-warning"
+            >
+              !
+            </div>
+          ) : null}
+          <ReactTooltip />
+        </td>
+        <td colSpan="3">{it.quantity} </td>
         <td colSpan="3">{it.Cijena}kn</td>
       </tr>
     );
@@ -42,6 +53,31 @@ const cart = props => {
           </tr>
         </tbody>
       </table>
+      {props.popover ? (
+        <div className="popoverr">
+          <h4>Patka szechuan</h4>
+          <form onSubmit={props.orderFoodHandler}>
+            <label htmlFor="quantity">Quantity:</label>
+            <input
+              type="number"
+              name="quantity"
+              className="form-group"
+              id="colFormLabel"
+              defaultValue="1"
+            />
+            <label htmlFor="remark">Remark:</label>
+            <textarea
+              name="remark"
+              className="form-group "
+              id="exampleFormControlTextarea1"
+              rows="3"
+            />
+            <button className="btn btn-danger  btn-block" type="submit">
+              Order
+            </button>
+          </form>
+        </div>
+      ) : null}
     </div>
   );
 };

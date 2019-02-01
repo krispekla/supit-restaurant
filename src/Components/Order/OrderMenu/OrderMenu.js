@@ -14,7 +14,7 @@ const orderMenu = props => {
           <td>
             <button
               className="btn btn-warning"
-              onClick={() => props.foodSelectHandler(item.JeloId)}
+              onClick={() => props.foodSelectHandler(item)}
             >
               {item.Cijena}.00kn
             </button>

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Intro.css";
-import Video from "../../Assets/burger2.mp4";
+import Video from "../../Assets/burger.mp4";
 // import sign from "../../Assets/sign.png";
 import sign from "../../Assets/logo4.png";
 

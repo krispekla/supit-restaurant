@@ -10,7 +10,9 @@ class Order extends React.Component {
     dataFetched: false,
     foodMenu: null,
     foodList: null,
-    orderList: []
+    orderList: [],
+    selectedItem: null,
+    popover: false
   };
 
   foodFlatter = foodMenu => {
@@ -45,20 +47,36 @@ class Order extends React.Component {
   };
 
   foodSelectHandler = item => {
-    let { orderList, foodList } = this.state;
-    // console.log(foodList, "-----", item);
+    let { selectedItem, popover } = this.state;
+    selectedItem = item;
+    popover = !popover;
+    this.setState({
+      selectedItem,
+      popover
+    });
+  };
+  orderFoodHandler = e => {
+    e.preventDefault();
+    let { selectedItem, foodList, orderList, popover } = this.state;
+    let newItem = foodList.find(el => el.JeloId === selectedItem.JeloId);
+    newItem.quantity = e.target.quantity.value;
+    newItem.remark = e.target.remark.value;
+    orderList.push(newItem);
 
-    orderList.push(foodList.find(el => el.JeloId === item));
-    // console.log(orderList);
-
-    this.setState({ orderList });
+    popover = !popover;
+    this.setState({
+      selectedItem,
+      foodList,
+      orderList,
+      popover
+    });
   };
 
   componentDidMount() {
     if (!this.state.foodMenu) {
       setTimeout(() => {
         this.handleFoodFetch();
-      }, 5500);
+      }, 1500);
     }
   }
 
@@ -76,7 +94,11 @@ class Order extends React.Component {
                 foodSelectHandler={this.foodSelectHandler}
               />
             </div>
-            <Cart orderList={this.state.orderList} />
+            <Cart
+              orderList={this.state.orderList}
+              popover={this.state.popover}
+              orderFoodHandler={this.orderFoodHandler}
+            />
           </div>
         ) : (
           <div className="loader-container">

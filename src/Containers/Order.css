@@ -13,11 +13,10 @@
   float: right;
   width: 400px;
   padding: 10px;
-  /* margin: 10px; */
+  height: 620px;
 }
 
 /* Clear floats after the columns */
-
 .clreafix {
   clear: both;
 }
