@@ -13,7 +13,9 @@ import Order from "./Order";
 
 class Restaurant extends React.Component {
   state = {
-    open: false
+    open: false,
+    navOpacity: "navbar navOpacity",
+    hamburger: false
   };
 
   modalSwitch = () => {
@@ -27,10 +29,25 @@ class Restaurant extends React.Component {
     this.setState({ open });
   };
 
+  componentDidMount() {
+    let { navOpacity } = this.state;
+    document.addEventListener("scroll", () => {
+      if (window.pageYOffset < window.innerHeight - 200) {
+        navOpacity = "navbar navOpacity";
+      } else {
+        navOpacity = "navbar";
+      }
+      this.setState({ navOpacity });
+    });
+  }
   render() {
     return (
       <React.Fragment>
-        <Navigation modalSwitch={this.modalSwitch} />
+        <Navigation
+          modalSwitch={this.modalSwitch}
+          navOpacity={this.state.navOpacity}
+          hamburger={this.state.hamburger}
+        />
         <Intro />
         <Delivery />
         <Order onCloseModal={this.modalSwitch} open={this.state.open} />

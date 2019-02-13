@@ -15,7 +15,7 @@ const cart = props => {
             <div
               data-tip={it.remark}
               data-place="right"
-              class="badge badge-pill badge-warning"
+              className="badge badge-pill badge-warning"
             >
               !
             </div>
@@ -55,7 +55,7 @@ const cart = props => {
       </table>
       {props.popover ? (
         <div className="popoverr">
-          <h4>Patka szechuan</h4>
+          <h4>{props.selectedItem.Naziv}</h4>
           <form onSubmit={props.orderFoodHandler}>
             <label htmlFor="quantity">Quantity:</label>
             <input

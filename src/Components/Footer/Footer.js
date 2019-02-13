@@ -7,13 +7,13 @@ const footer = () => {
   return (
     <div className="footer-container">
       <div className="footer-links">
-        <a>About us</a>
-        <a>iOS app</a>
-        <a>Android app</a>
+        <a href="#aboutus">About us</a>
+        <a href="#iOS">iOS app</a>
+        <a href="#Android">Android app</a>
       </div>
 
       <div className="footer-sign">
-        <p>SUPIT - Algebra</p>
+        <p>SUPIT - Algebra&copy;</p>
       </div>
 
       <div className="footer-social">

@@ -8,8 +8,10 @@
 
 #intro-sign {
   position: absolute;
-  width: 450px;
+  width: 550px;
   top: 30vh;
-  left: 36vw;
+  left: calc(50% - 220px);
   z-index: 1;
+  display: block;
+  margin: 0 auto;
 }

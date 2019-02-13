@@ -5,19 +5,14 @@ const orderMenu = props => {
   const foodMenu = props.foodMenu.map(menu => {
     let foodList = menu.Ponuda.map(item => {
       return (
-        <tr key={item.JeloId}>
+        <tr key={item.JeloId} onClick={() => props.foodSelectHandler(item)}>
           <td>
             {item.Naziv}
             <br />
             <small>{item.Opis}</small>
           </td>
           <td>
-            <button
-              className="btn btn-warning"
-              onClick={() => props.foodSelectHandler(item)}
-            >
-              {item.Cijena}.00kn
-            </button>
+            <button className="btn btn-warning">{item.Cijena}.00kn</button>
           </td>
         </tr>
       );

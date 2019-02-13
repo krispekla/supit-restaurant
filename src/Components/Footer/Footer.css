@@ -15,16 +15,19 @@
   margin-right: 15px;
   font-weight: 100;
   font-size: 1rem;
+  color: white;
 }
 
 .footer-links a:hover {
   cursor: pointer;
   color: rgb(43, 152, 255) !important;
+  text-decoration: none;
 }
 
 .footer-sign p {
-  color: grey;
+  color: rgb(124, 124, 124);
   margin: 0px;
+  font-weight: 400;
 }
 
 .footer-social {

@@ -1,5 +1,5 @@
 #ourCities-container {
-  min-height: 900px;
+  min-height: 850px;
   padding-top: 80px;
 }
 #ourCities-container h2 {
@@ -14,14 +14,14 @@
 }
 
 .city-item-container {
-  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-right: 25px;
 }
 
 .city-item-container img {
-  width: 260px;
+  width: 210px;
   min-height: 150px;
   margin-bottom: 20px;
 }

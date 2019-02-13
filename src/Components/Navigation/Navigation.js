@@ -5,12 +5,14 @@ import "./Navigation.css";
 
 const navigation = props => {
   return (
-    <nav className="navbar">
-      <a href="#">
+    <nav className={props.navOpacity}>
+      <a href="#intro">
         <img src={sign} alt="Smiley face" height="48" width="48" />
       </a>
 
-      <a onClick={props.modalSwitch}>ORDER</a>
+      <a href="#" onClick={props.modalSwitch}>
+        ORDER
+      </a>
 
       <ul>
         <li>
@@ -29,6 +31,12 @@ const navigation = props => {
           <a href="#contact-container">Contact us</a>
         </li>
       </ul>
+
+      <div className="hamburger">
+        <div className="bar1" />
+        <div className="bar2" />
+        <div className="bar3" />
+      </div>
     </nav>
   );
 };

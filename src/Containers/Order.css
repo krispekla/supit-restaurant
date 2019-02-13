@@ -5,7 +5,6 @@
   float: left;
   width: 550px;
   padding: 10px;
-  /* margin: 10px; */
   overflow-y: auto !important;
   height: 620px;
 }
@@ -22,13 +21,12 @@
 }
 .loader-container {
   height: 60vh;
+  width: 450px;
   display: flex;
   align-content: center;
   align-items: center;
   vertical-align: center;
 }
-.loader {
-  width: 180px !important;
-  height: 180px !important;
-  text-align: center;
+.loader-container svg {
+  margin: 0 28rem;
 }

@@ -1,6 +1,8 @@
 import React from "react";
 import "./Reviews.css";
-import reviewPic from "../../Assets/fulek.jpg";
+import fulanovic from "../../Assets/fulek.jpg";
+import djambic from "../../Assets/djambic.jpg";
+import kucak from "../../Assets/kucak.jpg";
 const reviews = () => {
   return (
     <div className="customer-review">
@@ -14,8 +16,8 @@ const reviews = () => {
             voluptas labore consectetur aduousucubg ekut Assumenda et dista!
           </p>
           <div className="customer-item-wrapper-inside">
-            <img src={reviewPic} alt="" />
-            <p>Danijel Kucak</p>
+            <img src={fulanovic} alt="" />
+            <p>Bojan Fulanovic</p>
           </div>
         </div>
         <div className="customer-item">
@@ -25,8 +27,8 @@ const reviews = () => {
             voluptas labore consectetur aduousucubg ekut Assumenda et dista!
           </p>
           <div className="customer-item-wrapper-inside">
-            <img src={reviewPic} alt="" />
-            <p>Danijel Kucak</p>
+            <img src={djambic} alt="" />
+            <p>Goran Djambic</p>
           </div>
         </div>
         <div className="customer-item">
@@ -36,7 +38,7 @@ const reviews = () => {
             voluptas labore consectetur aduousucubg ekut Assumenda et dista!
           </p>
           <div className="customer-item-wrapper-inside">
-            <img src={reviewPic} alt="" />
+            <img src={kucak} alt="" />
             <p>Danijel Kucak</p>
           </div>
         </div>

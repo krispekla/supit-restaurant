@@ -55,13 +55,42 @@ class Order extends React.Component {
       popover
     });
   };
+
+  updatingOrderList = newItem => {
+    let { selectedItem, orderList } = this.state;
+    console.log(newItem, selectedItem, orderList);
+    orderList[
+      orderList.findIndex(el => el.JeloId === selectedItem.JeloId)
+    ].quantity =
+      parseInt(newItem.quantity) +
+      parseInt(
+        orderList[orderList.findIndex(el => el.JeloId === selectedItem.JeloId)]
+          .quantity
+      );
+
+    orderList[
+      orderList.findIndex(el => el.JeloId === selectedItem.JeloId)
+    ].remark += newItem.remark;
+
+    console.log("--------------------------------------------");
+    console.log(newItem, selectedItem, orderList);
+
+    this.setState({ orderList });
+  };
+
   orderFoodHandler = e => {
     e.preventDefault();
     let { selectedItem, foodList, orderList, popover } = this.state;
     let newItem = foodList.find(el => el.JeloId === selectedItem.JeloId);
+
     newItem.quantity = e.target.quantity.value;
     newItem.remark = e.target.remark.value;
-    orderList.push(newItem);
+    //Checking if food is already added
+    if (orderList.find(el => el.JeloId === selectedItem.JeloId)) {
+      this.updatingOrderList(newItem);
+    } else {
+      orderList.push(newItem);
+    }
 
     popover = !popover;
     this.setState({
@@ -76,7 +105,7 @@ class Order extends React.Component {
     if (!this.state.foodMenu) {
       setTimeout(() => {
         this.handleFoodFetch();
-      }, 1500);
+      }, 4500);
     }
   }
 
@@ -98,6 +127,7 @@ class Order extends React.Component {
               orderList={this.state.orderList}
               popover={this.state.popover}
               orderFoodHandler={this.orderFoodHandler}
+              selectedItem={this.state.selectedItem}
             />
           </div>
         ) : (

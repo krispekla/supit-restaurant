@@ -8,7 +8,7 @@ const contact = () => {
       <hr />
       <form action="http://www.fulek.com/VUA/SUPIT/ContactUs" method="post">
         <div className="form-group row">
-          <label for="colFormLabel" className="col-sm-4 col-form-label">
+          <label htmlFor="colFormLabel" className="col-sm-4 col-form-label">
             Name:
           </label>
           <div className="col-sm-8">
@@ -21,7 +21,7 @@ const contact = () => {
           </div>
         </div>
         <div className="form-group row">
-          <label for="colFormLabel" className="col-sm-4 col-form-label">
+          <label htmlFor="colFormLabel" className="col-sm-4 col-form-label">
             Email:
           </label>
           <div className="col-sm-8">
@@ -34,21 +34,23 @@ const contact = () => {
           </div>
         </div>
         <div className="form-group row">
-          <label for="colFormLabel" className="col-sm-4 col-form-label">
+          <label htmlFor="colFormLabel" className="col-sm-4 col-form-label">
             Message importance:
           </label>
           <div className="col-sm-8">
-            <select name="importance" className="custom-select ">
+            <select
+              name="importance"
+              defaultValue="normal"
+              className="custom-select"
+            >
               <option value="low">Low</option>
-              <option selected value="normal">
-                Normal
-              </option>
+              <option value="normal">Normal</option>
               <option value="high">High</option>
             </select>
           </div>
         </div>
         <div className="form-group row">
-          <label for="colFormLabel" className="col-sm-4 col-form-label">
+          <label htmlFor="colFormLabel" className="col-sm-4 col-form-label">
             Receive newslatter:
           </label>
           <div className="col-sm-8">
@@ -61,14 +63,14 @@ const contact = () => {
                 value="true"
                 defaultChecked="true"
               />
-              <label className="custom-control-label" for="customCheck1">
+              <label className="custom-control-label" htmlFor="customCheck1">
                 Yes
               </label>
             </div>
           </div>
         </div>
         <div className="form-group row">
-          <label className="col-sm-4" for="exampleFormControlTextarea1">
+          <label className="col-sm-4" htmlFor="exampleFormControlTextarea1">
             Your message:
           </label>
           <div className="col-sm-8">
@@ -82,7 +84,7 @@ const contact = () => {
           </div>
         </div>
         <div className="text-center">
-          <button type="submit" class="btn btn-primary col-sm-4 ">
+          <button type="submit" className="btn btn-primary col-sm-4 ">
             Send
           </button>
         </div>
