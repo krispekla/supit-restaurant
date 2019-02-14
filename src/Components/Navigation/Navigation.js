@@ -1,34 +1,52 @@
 import React from "react";
-// import sign from "../../Assets/sign.png";
 import sign from "../../Assets/logo4.png";
 import "./Navigation.css";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const navigation = props => {
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
   return (
     <nav className={props.navOpacity}>
-      <a href="#intro">
+      <a href="#intro" onClick={scrollToTop}>
         <img src={sign} alt="Smiley face" height="48" width="48" />
       </a>
 
-      <a href="#" onClick={props.modalSwitch}>
+      <a href={props.modalSwitch} onClick={props.modalSwitch}>
         ORDER
       </a>
 
       <ul>
         <li>
-          <a href="#delivery-container">Delivery</a>
+          <Link
+            to="delivery-container"
+            smooth={true}
+            duration={1500}
+            offset={70}
+          >
+            Delivery
+          </Link>
         </li>
         <li>
-          <a href="#mobileApp-container">Mobile App</a>
+          <Link to="mobileApp-container" smooth={true} duration={1500}>
+            Mobile App
+          </Link>
         </li>
         <li>
-          <a href="#ourCities-container">Our Cities</a>
+          <Link to="ourCities-container" smooth={true} duration={1500}>
+            Our Cities
+          </Link>
         </li>
         <li>
-          <a href="#subscribe-container">Subscriptions</a>
+          <Link to="subscribe-container" smooth={true} duration={1500}>
+            Subscriptions
+          </Link>
         </li>
         <li>
-          <a href="#contact-container">Contact us</a>
+          <Link to="contact-container" smooth={true} duration={1500}>
+            Contact us
+          </Link>
         </li>
       </ul>
 

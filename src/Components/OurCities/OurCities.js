@@ -52,7 +52,7 @@ const ourCities = () => {
           </div>
         </div>
         <div className="city-item-container">
-          <img alt="city icon" src={paris} alt="iphone" />
+          <img alt="city icons" src={paris} />
           <h4>PARIS</h4>
           <div className="city-item-wrapper">
             <img alt="city icons" className="city-icons" src={person} />
