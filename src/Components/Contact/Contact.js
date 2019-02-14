@@ -84,7 +84,7 @@ const contact = () => {
           </div>
         </div>
         <div className="text-center">
-          <button type="submit" className="btn btn-primary col-sm-4 ">
+          <button type="submit" className="btn btn-danger col-sm-4 ">
             Send
           </button>
         </div>

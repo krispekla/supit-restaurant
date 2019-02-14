@@ -87,7 +87,7 @@ const subscribe = () => {
               Free delivery
             </li>
           </ul>
-          <button className="btn btn-primary" type="submit">
+          <button className="btn btn-danger" type="submit">
             Sign up now
           </button>
         </div>
@@ -172,7 +172,7 @@ const subscribe = () => {
               Free delivery
             </li>
           </ul>
-          <button className="btn btn-primary" type="submit">
+          <button className="btn btn-danger" type="submit">
             Sign up now
           </button>
         </div>
@@ -257,7 +257,7 @@ const subscribe = () => {
               Free delivery
             </li>
           </ul>
-          <button className="btn btn-primary" type="submit">
+          <button className="btn btn-danger" type="submit">
             Sign up now
           </button>
         </div>

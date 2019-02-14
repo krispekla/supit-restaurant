@@ -19,6 +19,7 @@ nav a img:first-child {
   width: 70px;
 }
 nav a:nth-child(2) {
+  font-weight: 700 !important;
   margin-right: 50px;
 }
 nav a {
@@ -27,9 +28,9 @@ nav a {
 }
 
 nav a:hover {
-  color: rgb(50, 139, 199);
-  text-decoration: none;
-  cursor: pointer;
+  color: rgb(199, 50, 50) !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
 }
 ul {
   display: flex;

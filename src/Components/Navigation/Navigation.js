@@ -13,9 +13,7 @@ const navigation = props => {
         <img src={sign} alt="Smiley face" height="48" width="48" />
       </a>
 
-      <a href={props.modalSwitch} onClick={props.modalSwitch}>
-        ORDER
-      </a>
+      <a onClick={props.modalSwitch}>ORDER</a>
 
       <ul>
         <li>
