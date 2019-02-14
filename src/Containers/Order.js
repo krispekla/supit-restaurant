@@ -135,7 +135,7 @@ class Order extends React.Component {
             <Loader
               className="loader"
               type="ThreeDots"
-              color="rgb(125,203,255)"
+              color="rgb(255, 25, 25)"
               height={180}
               width={180}
             />

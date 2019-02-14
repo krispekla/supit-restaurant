@@ -13,6 +13,7 @@
 .delivery-heading-container p {
   letter-spacing: 1px;
   line-height: 24px;
+  padding: initial 20px;
   padding-bottom: 60px;
 }
 .delivery-items-container {
@@ -30,11 +31,40 @@
   width: 48px;
   padding: 0;
   margin: 0 33%;
-  /* align-content: center; */
 }
 
 .delivery-item h4 {
   text-align: center;
   font-size: 1.4rem;
   margin: 0;
+}
+
+@media only screen and (max-width: 1220px) {
+  .delivery-items-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: center;
+
+    justify-content: center !important;
+  }
+
+  .delivery-item {
+    display: inline-block;
+    width: 285px;
+    margin: 0 20px;
+  }
+  .delivery-item svg {
+    width: 48px;
+    padding: 0;
+    margin: 0 33%;
+  }
+
+  .delivery-item h4 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 20px 0;
+  }
 }

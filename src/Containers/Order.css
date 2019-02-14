@@ -30,3 +30,68 @@
 .loader-container svg {
   margin: 0 28rem;
 }
+
+@media only screen and (max-width: 1110px) {
+  .styles_overlayCenter__YHoO7 {
+    align-items: unset;
+    padding: 0;
+  }
+  .styles_modal__gNwvD {
+    max-width: unset;
+    min-width: unset;
+    width: 100vw;
+    padding: 10px;
+    margin: 0 !important;
+    height: fit-content;
+  }
+  .styles_modal__gNwvD h2 {
+    font-size: 2rem !important;
+    margin-top: 10px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .menuColumn {
+    float: unset;
+    width: 100vw;
+    padding: 10px;
+    padding-top: 0;
+    overflow-y: hidden;
+    height: 60vh;
+  }
+  .menuColumn table {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .orderColumn {
+    float: unset;
+    width: 100vw;
+    padding: 20px;
+    padding-top: 30px;
+    height: fit-content;
+  }
+  .orderColumn table {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .loader-container {
+    height: 30vh;
+    width: 100%;
+    display: block;
+    align-content: unset;
+    align-items: center;
+  }
+  .loader-container svg {
+    position: fixed;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    top: 20vw;
+    left: 38%;
+    right: 50%;
+  }
+}

@@ -22,6 +22,7 @@
 .customer-item-wrapper {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 100px;
 }
@@ -50,6 +51,12 @@
 }
 .customer-item-wrapper-inside img {
   width: 82px;
-  /* height: 82px; */
   margin-right: 20px;
+}
+
+@media only screen and (max-width: 520px) {
+  .customer-review h2 {
+    font-size: 1.8rem !important;
+    padding: inherit 15px !important;
+  }
 }

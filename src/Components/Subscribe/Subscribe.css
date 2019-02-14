@@ -66,3 +66,9 @@
   width: 12px;
   margin-right: 15px;
 }
+@media only screen and (max-width: 520px) {
+  #subscribe-container h2 {
+    font-size: 1.8rem !important;
+    padding: inherit 15px !important;
+  }
+}

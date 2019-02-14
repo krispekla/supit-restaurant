@@ -15,7 +15,8 @@ class Restaurant extends React.Component {
   state = {
     open: false,
     navOpacity: "navbar navOpacity",
-    hamburger: false
+    hamburger: true,
+    hamburgerClassToggle: "hamburgerList hide"
   };
 
   modalSwitch = () => {
@@ -27,6 +28,20 @@ class Restaurant extends React.Component {
       open = true;
     }
     this.setState({ open });
+  };
+
+  hamburgerListToggle = () => {
+    let { hamburger, hamburgerClassToggle } = this.state;
+
+    if (hamburger) {
+      hamburger = false;
+      hamburgerClassToggle = "hamburgerList";
+    } else {
+      hamburger = true;
+      hamburgerClassToggle = "hamburgerList hide";
+    }
+
+    this.setState({ hamburger, hamburgerClassToggle });
   };
 
   componentDidMount() {
@@ -47,6 +62,8 @@ class Restaurant extends React.Component {
           modalSwitch={this.modalSwitch}
           navOpacity={this.state.navOpacity}
           hamburger={this.state.hamburger}
+          hamburgerClassToggle={this.state.hamburgerClassToggle}
+          hamburgerListToggle={this.hamburgerListToggle}
         />
         <Intro />
         <Delivery />

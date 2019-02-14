@@ -7,6 +7,7 @@ const navigation = props => {
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
+
   return (
     <nav className={props.navOpacity}>
       <a href="#intro" onClick={scrollToTop}>
@@ -15,7 +16,13 @@ const navigation = props => {
 
       <a onClick={props.modalSwitch}>ORDER</a>
 
-      <ul>
+      <div className="hamburger" onClick={props.hamburgerListToggle}>
+        <div className="bar1" />
+        <div className="bar2" />
+        <div className="bar3" />
+      </div>
+
+      <ul className={props.hamburgerClassToggle}>
         <li>
           <Link
             to="delivery-container"
@@ -47,12 +54,6 @@ const navigation = props => {
           </Link>
         </li>
       </ul>
-
-      <div className="hamburger">
-        <div className="bar1" />
-        <div className="bar2" />
-        <div className="bar3" />
-      </div>
     </nav>
   );
 };
