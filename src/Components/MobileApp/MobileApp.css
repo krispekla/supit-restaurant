@@ -64,3 +64,9 @@
     padding: inherit 15px !important;
   }
 }
+@media only screen and (max-width: 720px) {
+  .iphone-mockup {
+    width: 80vw;
+    margin: 30px 160px;
+  }
+}

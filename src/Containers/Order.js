@@ -58,7 +58,7 @@ class Order extends React.Component {
 
   updatingOrderList = newItem => {
     let { selectedItem, orderList } = this.state;
-    console.log(newItem, selectedItem, orderList);
+
     orderList[
       orderList.findIndex(el => el.JeloId === selectedItem.JeloId)
     ].quantity =
@@ -71,9 +71,6 @@ class Order extends React.Component {
     orderList[
       orderList.findIndex(el => el.JeloId === selectedItem.JeloId)
     ].remark += newItem.remark;
-
-    console.log("--------------------------------------------");
-    console.log(newItem, selectedItem, orderList);
 
     this.setState({ orderList });
   };
